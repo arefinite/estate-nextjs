@@ -136,12 +136,12 @@ const AddBlogPage = () => {
               />
             </div>
 
-            <ReactQuill
+            {/* <ReactQuill
               theme='snow'
               value={value}
               onChange={setValue}
               className='w-full h-64 pb-8 mb-8'
-            />
+            /> */}
 
             <div className='flex flex-col md:flex-row pt-6  md:pt-0 items-center gap-4'>
               <FormField
