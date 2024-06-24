@@ -25,7 +25,7 @@ const SitePath = ({
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink ><Link href='/admin/dashboard'>Dashboard</Link></BreadcrumbLink>
+          <Link href='/admin/dashboard'>Dashboard</Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         {items && (
