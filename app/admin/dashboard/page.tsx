@@ -47,7 +47,7 @@ const DashboardPage = () => {
           </CardContent>
         </Card>
       </section>
-      <section className='grid grid-cols-2 md:grid-cols-5 gap-4'>
+      <section className='grid grid-cols-2 md:grid-cols-5 gap-4 mt-8'>
         <Card className='text-center'>
           <CardHeader>
             <CardTitle>Buy Properties</CardTitle>
