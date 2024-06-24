@@ -31,6 +31,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
 import { Switch } from '@/components/ui/switch'
+import Link from 'next/link'
 const PropertyPage = () => {
   return (
     <section>
@@ -38,12 +39,14 @@ const PropertyPage = () => {
 
       <div className='mt-6 flex justify-between items-center'>
         <h1 className='text-lg font-semibold md:text-2xl'>Properties List</h1>
-        <Button className='space-x-2'>
-          <span>
-            <Plus className='h-5 w-5' />
-          </span>
-          <span>Add Property</span>
-        </Button>
+        <Link href='/admin/dashboard/properties/add-property'>
+          <Button className='space-x-2'>
+            <span>
+              <Plus className='h-5 w-5' />
+            </span>
+            <span>Add Property</span>
+          </Button>
+        </Link>
       </div>
       <div>
         <form>

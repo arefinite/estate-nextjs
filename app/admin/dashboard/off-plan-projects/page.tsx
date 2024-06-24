@@ -31,19 +31,24 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
 import { Switch } from '@/components/ui/switch'
+import Link from 'next/link'
 const OffPlanProjects = () => {
   return (
     <section>
       <SitePath items={false} currentPage='Off Plan Projects' />
 
       <div className='mt-6 flex justify-between items-center'>
-        <h1 className='text-lg font-semibold md:text-2xl'>Off Plan Project List</h1>
-        <Button className='space-x-2'>
-          <span>
-            <Plus className='h-5 w-5' />
-          </span>
-          <span>Add Off Plan Projects</span>
-        </Button>
+        <h1 className='text-lg font-semibold md:text-2xl'>
+          Off Plan Project List
+        </h1>
+        <Link href='/admin/dashboard/off-plan-projects/add-off-plan-project'>
+          <Button className='space-x-2'>
+            <span>
+              <Plus className='h-5 w-5' />
+            </span>
+            <span>Add Off Plan Projects</span>
+          </Button>
+        </Link>
       </div>
       <div>
         <form>

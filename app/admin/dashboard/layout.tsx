@@ -314,46 +314,243 @@ const DashboardLayout = ({
               </Button>
             </SheetTrigger>
             <SheetContent side='left' className='flex flex-col'>
-              <nav className='grid gap-2 text-lg font-medium'>
-                <Link
-                  href='#'
-                  className='mx-[-0.65rem] mt-4 flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground'
-                >
-                  <Home className='h-5 w-5' />
-                  Dashboard
-                </Link>
-                <Link
-                  href='#'
-                  className='mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground'
-                >
-                  <ShoppingCart className='h-5 w-5' />
-                  Orders
-                  <Badge className='ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full'>
-                    6
-                  </Badge>
-                </Link>
-                <Link
-                  href='#'
-                  className='mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground'
-                >
-                  <Package className='h-5 w-5' />
-                  Products
-                </Link>
-                <Link
-                  href='#'
-                  className='mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground'
-                >
-                  <Users className='h-5 w-5' />
-                  Customers
-                </Link>
-                <Link
-                  href='#'
-                  className='mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground'
-                >
-                  <LineChart className='h-5 w-5' />
-                  Analytics
-                </Link>
-              </nav>
+            <div className='flex-1'>
+            <nav className='grid items-start px-2 text-sm font-medium lg:px-4'>
+              <Link
+                href='/admin/dashboard'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard' ? 'font-bold' : ''
+                }`}
+              >
+                <Gauge className='h-4 w-4' />
+                Dashboard
+              </Link>
+              <Link
+                href='/admin/dashboard/properties'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/properties' ? 'font-bold' : ''
+                }`}
+              >
+                <Landmark className='h-4 w-4' />
+                Properties
+              </Link>
+              <Link
+                href='/admin/dashboard/off-plan-projects'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/off-plan-projects' ? 'font-bold' : ''
+                }`}
+              >
+                <School className='h-4 w-4' />
+                Off Plan Projects
+              </Link>
+              <Link
+                href='/admin/dashboard/amenities'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/amenities' ? 'font-bold' : ''
+                }`}
+              >
+                <WashingMachine className='h-4 w-4' />
+                Amenities
+              </Link>
+
+              <Link
+                href='/admin/dashboard/agents'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/agents' ? 'font-bold' : ''
+                }`}
+              >
+                <Users className='h-4 w-4' />
+                Agents
+              </Link>
+              <Link
+                href='/admin/dashboard/subscribers'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/subscribers' ? 'font-bold' : ''
+                }`}
+              >
+                <ShieldCheck className='h-4 w-4' />
+                Subscribers
+              </Link>
+              <Link
+                href='/admin/dashboard/developers'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/developers' ? 'font-bold' : ''
+                }`}
+              >
+                <Building2 className='h-4 w-4' />
+                Dubai Developers
+              </Link>
+              <Link
+                href='/admin/dashboard/blogs'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/blogs' ? 'font-bold' : ''
+                }`}
+              >
+                <Rss className='h-4 w-4' />
+                Blogs
+              </Link>
+
+              <Accordion type='single' collapsible className='space-y-4'>
+                <AccordionItem value='item-2'>
+                  <AccordionTrigger>
+                    <li
+                      className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary `}
+                    >
+                      <StickyNote className='h-4 w-4' />
+                      Page Management
+                    </li>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className='ml-2'>
+                      <li>
+                        <Link href='/admin/dashboard/pages/about-us'>
+                          <span
+                            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                              pathName === '/admin/dashboard/pages/about-us'
+                                ? 'font-bold'
+                                : ''
+                            }`}
+                          >
+                            <Layers2 className='h-4 w-4' />
+                            About Us
+                          </span>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href='/admin/dashboard/pages/why-dubai'>
+                          <span
+                            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                              pathName === '/admin/dashboard/pages/why-dubai'
+                                ? 'font-bold'
+                                : ''
+                            }`}
+                          >
+                            <Layers2 className='h-4 w-4' />
+                            Why Dubai
+                          </span>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href='/admin/dashboard/pages/invest-in-dubai'>
+                          <span
+                            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                              pathName ===
+                              '/admin/dashboard/pages/invest-in-dubai'
+                                ? 'font-bold'
+                                : ''
+                            }`}
+                          >
+                            <Layers2 className='h-4 w-4' />
+                            Invest in Dubai Real-Estate
+                          </span>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href='/admin/dashboard/pages/dubai-fact-numbers'>
+                          <span
+                            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                              pathName ===
+                              '/admin/dashboard/pages/dubai-fact-numbers'
+                                ? 'font-bold'
+                                : ''
+                            }`}
+                          >
+                            <Layers2 className='h-4 w-4' />
+                            Dubai Fact Numbers
+                          </span>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href='/admin/dashboard/pages/why-invest-off-plan'>
+                          <span
+                            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                              pathName ===
+                              '/admin/dashboard/pages/why-invest-off-plan'
+                                ? 'font-bold'
+                                : ''
+                            }`}
+                          >
+                            <Layers2 className='h-4 w-4' />
+                            Why Invest in Off Plan
+                          </span>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href='/admin/dashboard/pages/guide-renting'>
+                          <span
+                            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                              pathName ===
+                              '/admin/dashboard/pages/guide-renting'
+                                ? 'font-bold'
+                                : ''
+                            }`}
+                          >
+                            <Layers2 className='h-4 w-4' />
+                            Guide on Renting
+                          </span>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href='/admin/dashboard/pages/guide-selling'>
+                          <span
+                            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                              pathName ===
+                              '/admin/dashboard/pages/guide-selling'
+                                ? 'font-bold'
+                                : ''
+                            }`}
+                          >
+                            <Layers2 className='h-4 w-4' />
+                            Guide to Selling
+                          </span>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href='/admin/dashboard/pages/privacy-policy'>
+                          <span
+                            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                              pathName ===
+                              '/admin/dashboard/pages/privacy-policy'
+                                ? 'font-bold'
+                                : ''
+                            }`}
+                          >
+                            <Layers2 className='h-4 w-4' />
+                            Privacy & Policy
+                          </span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Link
+                href='/admin/dashboard/logs'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/logs' ? 'font-bold' : ''
+                }`}
+              >
+                <FileClock className='h-4 w-4' />
+                Admin Logs
+              </Link>
+              <Link
+                href='/admin/dashboard/settings'
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${
+                  pathName === '/admin/dashboard/settings' ? 'font-bold' : ''
+                }`}
+              >
+                <Settings className='h-4 w-4' />
+                Settings
+              </Link>
+            </nav>
+          </div>
             </SheetContent>
           </Sheet>
           <div className='w-full flex-1'>
