@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useState, ChangeEvent } from 'react'
-import ReactQuill from 'react-quill'
+
 import 'react-quill/dist/quill.snow.css'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -19,6 +19,8 @@ import { z } from 'zod'
 import SitePath from '../shared/SitePath'
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false })
 
 interface PageComponentsProps {
   title: string

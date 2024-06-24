@@ -11,7 +11,6 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useState, ChangeEvent } from 'react'
-import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -20,6 +19,8 @@ import { z } from 'zod'
 import Link from 'next/link'
 import Image from 'next/image'
 import SitePath from '@/components/shared/SitePath'
+import dynamic from 'next/dynamic'
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false })
 
 const formSchema = z.object({
   title: z.string().min(5, {
@@ -136,12 +137,12 @@ const AddBlogPage = () => {
               />
             </div>
 
-            {/* <ReactQuill
+            <ReactQuill
               theme='snow'
               value={value}
               onChange={setValue}
               className='w-full h-64 pb-8 mb-8'
-            /> */}
+            />
 
             <div className='flex flex-col md:flex-row pt-6  md:pt-0 items-center gap-4'>
               <FormField
